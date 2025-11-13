@@ -154,7 +154,6 @@ const ContactUsPage = () => {
                             </select>
                         </div>
 
-                        {/* Message */}
                         <textarea
                             name="message"
                             placeholder="Your Message"
