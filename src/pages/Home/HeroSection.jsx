@@ -26,7 +26,7 @@ const HeroSection = () => {
                     </p>
 
                     <a
-                        href="#"
+                        href="#contact"
                         className="inline-block transform rounded-md bg-coquelicot px-8 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-orange-600"
                     >
                         Get Started
