@@ -1,0 +1,37 @@
+/* swiper-custom.css */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important; /* custom blue for arrows */
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background: #ffffff; /* slate-300 */
+  border-radius: 9999px;
+  overflow: hidden;
+  margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #000; /* Tailwind blue-900 */
+  animation: fillBullet 3s linear forwards; /* match autoplay delay */
+}
+
+@keyframes fillBullet {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
