@@ -52,7 +52,7 @@ const AboutSection = () => {
                     </p>
 
                     <a
-                        href="#programs"
+                        href="#services"
                         className="mt-4 inline-block transform rounded-md bg-coquelicot px-8 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-orange-600"
                     >
                         Explore Our Services
