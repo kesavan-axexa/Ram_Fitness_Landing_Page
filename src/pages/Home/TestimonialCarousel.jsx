@@ -70,53 +70,20 @@ const TestimonialCarousel = () => {
         setModalOpen(true);
     };
 
-    // const settings = {
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 4500,
-    //     adaptiveHeight: true, // important for mobile
-    //     dots: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 480, // Small mobile first
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 768, // Mobile & tablets
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1,
-    //             },
-    //         },
-    //         {
-    //             breakpoint: 1024, // Tablets & small laptops
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 1,
-    //             },
-    //         },
-    //     ],
-    // };
-
     const settings = {
         dots: true,
         infinite: true,
-        speed: 3000,
-        slidesToShow: 3, // default for desktop
+        speed: 500,
+        slidesToShow: 1, // default desktop
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 6000,
-        adaptiveHeight: true, // optional
+        autoplaySpeed: 4500,
+        adaptiveHeight: true,
         // nextArrow: <NextArrow />,
         // prevArrow: <PrevArrow />,
         responsive: [
             {
-                breakpoint: 1024, // tablets & small laptops
+                breakpoint: 1024, // tablets
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
@@ -139,7 +106,7 @@ const TestimonialCarousel = () => {
         ],
     };
 
-    const truncateText = (text, maxLength = 120) => {
+    const truncateText = (text, maxLength = 500) => {
         if (text.length <= maxLength) return text;
         return text.slice(0, maxLength);
     };
@@ -157,10 +124,10 @@ const TestimonialCarousel = () => {
             {/* Carousel */}
             <Slider
                 {...settings}
-                className="w-full"
+                className="w-full max-w-3xl mx-auto"
             >
                 {testimonials.map((item, idx) => {
-                    const isLong = item.review.length > 120;
+                    const isLong = item.review.length > 500;
                     return (
                         <div
                             key={idx}
