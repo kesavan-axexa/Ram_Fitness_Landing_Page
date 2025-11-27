@@ -17,7 +17,7 @@ const testimonials = [
     },
     {
         name: "Priya",
-        review: "The programs are well-structured and very effective. I loved the nutrition guidance along with workouts!",
+        review: "The programs are well-structured and very effective. I loved the nutrition guidance along with workouts, Truely impressive!",
         date: "2025-03-15",
     },
     {
@@ -70,32 +70,82 @@ const TestimonialCarousel = () => {
         setModalOpen(true);
     };
 
+    // const settings = {
+    //     infinite: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     autoplaySpeed: 4500,
+    //     adaptiveHeight: true, // important for mobile
+    //     dots: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 480, // Small mobile first
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 768, // Mobile & tablets
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //             },
+    //         },
+    //         {
+    //             breakpoint: 1024, // Tablets & small laptops
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //             },
+    //         },
+    //     ],
+    // };
+
     const settings = {
+        dots: true,
         infinite: true,
-        slidesToShow: 3,
+        speed: 3000,
+        slidesToShow: 3, // default for desktop
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4500,
-        // arrows: true,
-        dots: true,
+        autoplaySpeed: 6000,
+        adaptiveHeight: true, // optional
         // nextArrow: <NextArrow />,
         // prevArrow: <PrevArrow />,
         responsive: [
-            { breakpoint: 1280, settings: { slidesToShow: 2 } }, // tablets & small laptops
-            { breakpoint: 1024, settings: { slidesToShow: 1 } }, // iPad portrait & mobiles
-            { breakpoint: 768, settings: { slidesToShow: 1 } }, // Mobile
-            { breakpoint: 480, settings: { slidesToShow: 1 } }, // Small mobile
+            {
+                breakpoint: 1024, // tablets & small laptops
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 768, // mobile
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480, // small mobile
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
         ],
     };
 
-    // Helper to truncate text for inline "Read More"
-    const truncateText = (text, maxLength = 100) => {
+    const truncateText = (text, maxLength = 120) => {
         if (text.length <= maxLength) return text;
         return text.slice(0, maxLength);
     };
 
     return (
-        <section className="relative bg-gray-50 px-6 py-20 md:px-20">
+        <section className="slider-container relative bg-gray-50 px-6 py-20 md:px-20">
             {/* Header */}
             <div className="mx-auto mb-12 max-w-6xl text-center">
                 <p className="inline-block rounded-md bg-gray-100/20 px-6 py-3 font-semibold uppercase tracking-wide text-coquelicot">
@@ -107,7 +157,7 @@ const TestimonialCarousel = () => {
             {/* Carousel */}
             <Slider
                 {...settings}
-                className="mx-auto max-w-6xl"
+                className="w-full"
             >
                 {testimonials.map((item, idx) => {
                     const isLong = item.review.length > 120;
