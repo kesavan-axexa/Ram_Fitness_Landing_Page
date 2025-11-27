@@ -14,7 +14,7 @@ const Footer = () => {
     const navItems = [
         { label: "Home", id: "home" },
         { label: "About Us", id: "about" },
-        { label: "Our Services", id: "services" },
+        { label: "Our Gallery", id: "gallery" },
         { label: "Contact Us", id: "contact" },
     ];
 
