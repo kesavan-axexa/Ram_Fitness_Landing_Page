@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const HeroSection = () => {
+    const words = ["Stronger!", "Braver!", "Faster!"];
+    const [index, setIndex] = useState(0);
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setAnimate(true);
+
+            setTimeout(() => {
+                setIndex((prev) => (prev + 1) % words.length);
+                setAnimate(false);
+            }, 500);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section
             id="home"
@@ -8,7 +25,8 @@ const HeroSection = () => {
             className="bg-richBlack2 bg-hero-bg relative overflow-hidden bg-cover bg-center py-16 text-white md:py-24"
         >
             <div className="container relative z-10 mx-auto mt-14 flex flex-col items-center justify-between px-4 md:mt-0 md:px-20 lg:flex-row">
-                {/* ======= Hero Content ======= */}
+                
+                {/* ===== Hero Content ===== */}
                 <div className="space-y-6 text-center lg:w-1/2 lg:text-left">
                     <p className="text-silverMetallic text-xl font-light md:text-2xl">
                         <strong className="mr-2 font-semibold text-coquelicot">The Best</strong>
@@ -17,12 +35,23 @@ const HeroSection = () => {
 
                     <h1 className="text-4xl font-extrabold leading-tight md:text-6xl">
                         Push Beyond Your <br />
-                        Limits And, <br className="hidden md:block" /> Become Stronger.
+                        Limits And, <br className="hidden md:block" />
+
+                        <span className="inline-flex gap-3">
+                            Become{" "}
+                            <span
+                                key={index}
+                                className={`text-coquelicot inline-block ${animate ? "animate-slideDow" : ""}`}
+                            >
+                                {words[index]}
+                            </span>
+                        </span>
                     </h1>
 
                     <p className="text-cadetGray mx-auto max-w-lg text-lg lg:mx-0">
-                        Greatness begins when you refuse to stop. Every rep, every drop of sweat, brings you closer to the best version of yourself.
-                        Step inside, train hard, and let your transformation begin.
+                        Greatness begins when you refuse to stop. Every rep, every drop of sweat, 
+                        brings you closer to the best version of yourself. Step inside, train hard, 
+                        and let your transformation begin.
                     </p>
 
                     <a
@@ -33,25 +62,25 @@ const HeroSection = () => {
                     </a>
                 </div>
 
-                {/* ======= Hero Banner ======= */}
+                {/* ===== Hero Banner ===== */}
                 <div className="relative mt-12 flex justify-center lg:mt-10 lg:w-1/2">
                     <img
                         src="/images/hero-banner.png"
                         alt="hero banner"
-                        className="relative z-10 w-[300px] object-contain md:w-[500px] lg:w-[500px]"
+                        className="relative z-10 w-[300px] object-contain md:w-[500px]"
                     />
 
                     <img
                         src="/images/hero-circle-one.png"
+                        className="absolute left-0 top-0 w-[200px] animate-pulse opacity-30 md:w-[400px]"
                         alt=""
                         aria-hidden="true"
-                        className="absolute left-0 top-0 w-[200px] animate-pulse opacity-30 md:w-[400px]"
                     />
                     <img
                         src="/images/hero-circle-two.png"
+                        className="absolute bottom-0 right-0 w-[250px] opacity-20 md:w-[450px]"
                         alt=""
                         aria-hidden="true"
-                        className="absolute bottom-0 right-0 w-[250px] opacity-20 md:w-[450px]"
                     />
 
                     <img
@@ -67,7 +96,6 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            {/* Overlay */}
             <div className="from-richBlack1/60 to-richBlack2/10 absolute inset-0 z-0 bg-gradient-to-br"></div>
         </section>
     );

@@ -33,7 +33,7 @@ const CoachingBanner = () => {
 
         <div className="w-full">
           <img
-            src="/images/coach-banner.webp"
+            src="/images/coach-banner_1.webp"
             alt="Coach Preethyram"
             loading="lazy"
             className="rounded-xl shadow-xl w-full object-cover h-full max-h-[500px]"

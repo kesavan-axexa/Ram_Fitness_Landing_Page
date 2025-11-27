@@ -1,12 +1,12 @@
 import React from "react";
 
 const galleryImages = [
-    "/images/class-5.webp",
-    "/images/class-8.webp",
-    "/images/class-9.webp",
-    "/images/class-11.webp",
-    "/images/class-6.webp",
-    "/images/class-10.webp",
+    "/images/gallery_1.webp",
+    "/images/gallery_2.webp",
+    "/images/gallery_3.webp",
+    "/images/gallery_4.webp",
+    "/images/gallery_5.webp",
+    "/images/gallery_6.webp",
 ];
 
 const GallerySection = () => {

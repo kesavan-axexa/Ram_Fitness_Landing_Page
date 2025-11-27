@@ -3,7 +3,7 @@ const TransformNowBanner = () => {
         <section
             className="relative flex h-[70vh] tracking-wide pt-10 w-full items-center justify-center bg-cover bg-fixed bg-center md:h-[65vh]"
             style={{
-                backgroundImage: "url('/images/coach-banner.webp')",
+                backgroundImage: "url('/images/coach-banner_1.webp')",
             }}
         >
             {/* Overlay */}
@@ -13,7 +13,7 @@ const TransformNowBanner = () => {
                 
                 <p className="text-white text-sm font-semibold uppercase tracking-wide bg-coquelicot/30 px-6 py-2.5 rounded-lg  inline-block">
                     Meet Your Coach
-                </p>
+            </p>
 
                 <h1 className="mt-4 text-4xl font-bold  text-white md:text-6xl">
                     Coach <span className="text-coquelicot">Preethyram</span>
