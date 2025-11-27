@@ -140,10 +140,10 @@ const ContactUsPage = () => {
                             <label className="mb-2 block text-sm font-semibold text-richBlack1">Select Program</label>
                             <select
                                 name="program"
-                                className="w-full rounded-md border border-gray-300 p-3 outline-none transition"
+                                className="w-full rounded-md bg-white border border-gray-300 p-3 outline-none transition"
                                 required
                             >
-                                <option value="">Choose a Program</option>
+                                <option value="" className="text-gray-700">Choose a Program</option>
                                 <option value="FITNESS CONSULTATION W/COACH PREETHYRAM">Fitness Consultation w/Coach Preethyram</option>
                                 <option value="FOUNDATION PROGRAM">Foundation Program</option>
                                 <option value="ELITE 90: TOTAL BODY REBOOT">Elite 90: Total Body Reboot</option>

@@ -36,7 +36,7 @@ const GallerySection = () => {
             </div>
 
             {/* Dynamic Grid */}
-            <div className={`grid auto-rows-fr gap-6 ${gridColsClass}`}>
+            <div className={`grid auto-rows-fr grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:${gridColsClass} `}>
                 {galleryImages.map((src, idx) => (
                     <div
                         key={idx}
