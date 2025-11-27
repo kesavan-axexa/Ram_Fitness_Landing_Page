@@ -26,9 +26,9 @@ const Footer = () => {
                 <div>
                     <div className="mb-4 flex items-center space-x-2 text-2xl font-extrabold uppercase tracking-wide">
                         <img
-                            src="/images/class-icon-1.png"
+                            src="/images/rfc-logo.png"
                             alt="Logo"
-                            className="w-10"
+                            className="w-14"
                         />
                         <span>
                             <span className="text-coquelicot">RAM</span>FITNESS

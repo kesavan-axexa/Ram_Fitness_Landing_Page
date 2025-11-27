@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -44,13 +45,13 @@ const Navbar = () => {
                 scrolled ? "bg-richBlack1/40 shadow-lg backdrop-blur-md" : "bg-transparent"
             }`}
         >
-            <div className="container mx-auto flex items-center justify-between px-4 py-8 md:px-20">
+            <div className="container mx-auto flex items-center justify-between px-4 py-5 md:px-20">
                 {/* ===== Logo ===== */}
-                <div className="flex items-center space-x-2 text-2xl font-extrabold uppercase tracking-wide text-white">
+                <div onClick={() => navigate("/")} className="flex cursor-pointer items-center space-x-2 text-2xl font-extrabold uppercase tracking-wide text-white">
                     <img
-                        src="/images/class-icon-1.png"
+                        src="/images/rfc-logo.png"
                         alt="Logo"
-                        className="w-10"
+                        className="w-14"
                     />{" "}
                     <span className="text-coquelicot">RAM</span>FITNESS
                 </div>
@@ -74,14 +75,15 @@ const Navbar = () => {
                 <div className="hidden md:block">
                     <button
                         onClick={() => {
-                            const contactSection = document.getElementById("contact");
-                            if (contactSection) {
-                                contactSection.scrollIntoView({ behavior: "smooth" });
-                            }
+                            navigate("/transform-now");
+                            // const contactSection = document.getElementById("contact");
+                            // if (contactSection) {
+                            //     contactSection.scrollIntoView({ behavior: "smooth" });
+                            // }
                         }}
-                        className="rounded-md bg-coquelicot px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
+                        className="rounded-md bg-coquelicot px-4 py-2.5 font-semibold text-white transition hover:bg-orange-600"
                     >
-                        Join Now
+                        Transform Now
                     </button>
                 </div>
 
@@ -96,7 +98,7 @@ const Navbar = () => {
 
             {/* ===== Mobile Menu ===== */}
             {isOpen && (
-                <div className="bg-richBlack2/80 border-white10 border-t text-white md:hidden">
+                <div className="border-t border-white10 bg-richBlack2/80 text-white md:hidden">
                     <ul className="flex flex-col space-y-4 px-6 py-6 text-lg font-medium">
                         {navItems.map((item) => (
                             <li key={item.id}>
@@ -120,15 +122,16 @@ const Navbar = () => {
                             </Link> */}
                             <button
                                 onClick={() => {
-                                    const contactSection = document.getElementById("contact");
-                                    if (contactSection) {
-                                        contactSection.scrollIntoView({ behavior: "smooth" });
-                                    }
+                                    // const contactSection = document.getElementById("contact");
+                                    // if (contactSection) {
+                                    //     contactSection.scrollIntoView({ behavior: "smooth" });
+                                    // }
+                                    navigate("/transform-now")
                                     setIsOpen(false);
                                 }}
                                 className="inline-block w-full rounded-md bg-coquelicot py-2 text-center font-semibold text-white transition hover:bg-orange-600"
                             >
-                                Join Now
+                                Transform Now
                             </button>
                         </li>
                     </ul>

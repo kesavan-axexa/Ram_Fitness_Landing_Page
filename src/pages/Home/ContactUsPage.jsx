@@ -10,7 +10,7 @@ const ContactUsPage = () => {
         >
             {/* ===== Heading ===== */}
             <div className="mb-12 text-center">
-                <p className="inline-block rounded-md bg-coquelicot px-6 py-2 font-semibold uppercase tracking-wide text-white">Contact Us</p>
+                <p className="inline-block rounded-md bg-gray-100/20 px-6 py-3 font-semibold uppercase tracking-wide text-coquelicot">Contact Us</p>
                 <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Get In Touch With Us</h2>
                 <p className="mx-auto mt-3 max-w-2xl text-sonicSilver">
                     Have questions or want to join our fitness community? Reach out to us — we’d love to hear from you and help you begin your
@@ -136,7 +136,6 @@ const ContactUsPage = () => {
                             />
                         </div>
 
-                        {/* Dropdown */}
                         <div className="mb-5">
                             <label className="mb-2 block text-sm font-semibold text-richBlack1">Select Program</label>
                             <select
@@ -144,13 +143,12 @@ const ContactUsPage = () => {
                                 className="w-full rounded-md border border-gray-300 p-3 outline-none transition"
                                 required
                             >
-                                <option value="">-- Choose a Category --</option>
-                                <option value="Muscle Building">Muscle Building</option>
-                                <option value="Cardio">Cardio</option>
-                                <option value="CrossFit">CrossFit</option>
-                                <option value="Yoga">Yoga</option>
-                                <option value="Zumba">Zumba</option>
-                                <option value="Personal Training">Personal Training</option>
+                                <option value="">Choose a Program</option>
+                                <option value="FITNESS CONSULTATION W/COACH PREETHYRAM">Fitness Consultation w/Coach Preethyram</option>
+                                <option value="FOUNDATION PROGRAM">Foundation Program</option>
+                                <option value="ELITE 90: TOTAL BODY REBOOT">Elite 90: Total Body Reboot</option>
+                                <option value="EVOLUTION 180: REBUILD AND RAISE">Evolution 180: Rebuild and Raise</option>
+                                <option value="THE YEAR OF NEW YOU 365">The Year of New You 365</option>
                             </select>
                         </div>
 

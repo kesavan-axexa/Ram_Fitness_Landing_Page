@@ -5,16 +5,23 @@ import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 import ContactUsPage from "./ContactUsPage";
 import Footer from "./Footer";
+import { AchievementsSection } from "./AchievementsSection";
+import GallerySection from "./GallerySection";
+import CoachingBanner from "./CoachingBanner";
+import TestimonialCarousel from "./TestimonialCarousel";
 
 const Page = () => {
     return (
         <div className="">
-            <Navbar />
+            {/* <Navbar /> */}
             <HeroSection />
             <AboutSection />
-            <ServicesSection />
+            <AchievementsSection />
+            <GallerySection />
+            <CoachingBanner />
+            <TestimonialCarousel />
             <ContactUsPage />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };
