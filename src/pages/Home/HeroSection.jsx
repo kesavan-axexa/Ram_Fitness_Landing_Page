@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
     const words = ["Stronger!", "Braver!", "Faster!"];
@@ -54,20 +55,20 @@ const HeroSection = () => {
                         and let your transformation begin.
                     </p>
 
-                    <a
-                        href="#contact"
+                    <Link
+                        to="/transform-now"
                         className="inline-block transform rounded-md bg-coquelicot px-8 py-3 font-semibold text-white transition-transform hover:scale-105 hover:bg-orange-600"
                     >
-                        Get Started
-                    </a>
+                        Become Unstoppable
+                    </Link>
                 </div>
 
                 {/* ===== Hero Banner ===== */}
                 <div className="relative mt-12 flex justify-center lg:mt-10 lg:w-1/2">
                     <img
-                        src="/images/hero-banner.png"
+                        src="/images/hero-section_1.png"
                         alt="hero banner"
-                        className="relative z-10 w-[300px] object-contain md:w-[500px]"
+                        className="relative z-10 md:h-[75vh] w-[300px] object-contain md:w-[800px]"
                     />
 
                     <img

@@ -48,7 +48,8 @@ const AboutSection = () => {
                     </p>
                     <div className="mt-4 flex justify-center gap-8 lg:justify-start">
                         <a
-                            href="#"
+                            href="https://www.instagram.com/ramfitnessclub/?hl=en"
+                            target="_blank"
                             className="group flex items-center gap-2"
                         >
                             <img
@@ -56,7 +57,7 @@ const AboutSection = () => {
                                 alt="Instagram"
                                 className="h-7 w-7 object-contain transition-transform group-hover:scale-110"
                             />
-                            <span className="text-sm font-semibold text-richBlack2">72K+</span>
+                            <span className="text-sm font-semibold text-richBlack2">15.9K+</span>
                         </a>
 
                         <a
@@ -84,9 +85,9 @@ const AboutSection = () => {
                         </a>
                     </div>
 
-                    <Link 
+                    <Link
                         to="/transform-now"
-                        className="mt-4 inline-block transform rounded-md bg-coquelicot px-8 py-3 font-semibold text-white transition-transform  hover:bg-orange-600"
+                        className="mt-4 inline-block transform rounded-md bg-coquelicot px-8 py-3 font-semibold text-white transition-transform hover:bg-orange-600"
                     >
                         Explore Our Training Programs
                     </Link>

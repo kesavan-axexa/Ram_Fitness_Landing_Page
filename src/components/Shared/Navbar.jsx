@@ -98,7 +98,7 @@ const Navbar = () => {
 
             {/* ===== Mobile Menu ===== */}
             {isOpen && (
-                <div className="border-t border-white10 bg-richBlack2/80 text-white md:hidden">
+                <div className="border-t border-white10 bg-richBlack1/40 text-white md:hidden">
                     <ul className="flex flex-col space-y-4 px-6 py-6 text-lg font-medium">
                         {navItems.map((item) => (
                             <li key={item.id}>
